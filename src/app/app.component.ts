@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from "@angular/core";
 import {
   NavigationEnd,
   Router
@@ -9,14 +12,17 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   public isLandingPage: boolean = false;
 
   constructor(private router: Router) {
+  }
+
+  public ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isLandingPage = event.url === '/landing';
+        this.isLandingPage = event.urlAfterRedirects === '/landing';
       }
     });
   }

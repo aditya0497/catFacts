@@ -1,9 +1,7 @@
 <div class="app-container">
-  <div *ngIf="!isLandingPage">
-    <nav>
-      <button (click)="navigateToFactEntry()">Home</button>
-      <button (click)="navigateToTagList()">View Tags</button>
-    </nav>
-  </div>
+  <nav *ngIf="!isLandingPage">
+    <button (click)="navigateToFactEntry()">Home</button>
+    <button (click)="navigateToTagList()">View Tags</button>
+  </nav>
   <router-outlet></router-outlet>
 </div>
