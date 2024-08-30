@@ -24,11 +24,11 @@ export class CatFactService {
     this.facts.push({ id: ++this.currentId, text: factText, notes, tags });
   }
 
-  public getFacts(): Observable<{ id: number, text: string, notes: string, tags: string[] }[]> {
+  public getFacts(): Observable<FactModel[]> {
     return of(this.facts);
   }
 
-  public getFactsByTag(tag: string): Observable<{ id: number, text: string, notes: string, tags: string[] }[]> {
+  public getFactsByTag(tag: string): Observable<FactModel[]> {
     return of(this.facts.filter(fact => fact.tags.includes(tag)));
   }
 
