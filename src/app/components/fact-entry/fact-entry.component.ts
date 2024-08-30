@@ -43,15 +43,15 @@ export class FactEntryComponent implements OnInit {
   public addFact(): void {
     if (this.fact && this.tags.length > 0) {
       this.catFactService.addFact(this.fact, this.notes, this.tags);
-      this.loadFacts(); // Refresh the list of saved facts
-      this.clearFact(); // Clear the displayed fact
+      this.loadFacts();
+      this.clearFact();
     }
   }
 
   public addTag(): void {
     if (this.newTag && !this.allTags.includes(this.newTag)) {
       this.allTags.push(this.newTag);
-      this.catFactService.addTag(this.newTag); // Save new tag in the service
+      this.catFactService.addTag(this.newTag);
       this.newTag = '';
     }
   }

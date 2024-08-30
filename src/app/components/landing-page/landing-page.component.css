@@ -1,0 +1,43 @@
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f6e58d;
+  background-image: linear-gradient(to bottom right, #f6e58d, #ffbe76);
+  text-align: center;
+}
+
+.landing-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.landing-content h1 {
+  font-size: 36px;
+  color: #535c68;
+  margin-bottom: 20px;
+}
+
+.landing-content p {
+  font-size: 18px;
+  color: #535c68;
+  margin-bottom: 30px;
+}
+
+.landing-content button {
+  background-color: #6ab04c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-content button:hover {
+  background-color: #45a049;
+}
