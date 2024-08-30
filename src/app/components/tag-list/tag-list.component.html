@@ -1,0 +1,8 @@
+<div class="tag-list">
+  <h2>All Tags</h2>
+  <ul>
+    <li *ngFor="let tag of tags" (click)="viewTag(tag)">
+      {{ tag }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+<div class="fact-entry">
+  <button (click)="getRandomFact()">Get Random Cat Fact</button>
+
+  <div *ngIf="fact">
+    <p>{{ fact }}</p>
+    <textarea [(ngModel)]="notes" placeholder="Add notes"></textarea>
+    <div>
+      <input [(ngModel)]="newTag" placeholder="New tag" />
+      <button (click)="addTag()">Add Tag</button>
+      <div>
+        <label *ngFor="let tag of allTags">
+          <input type="checkbox" [checked]="tags.includes(tag)" (change)="onTagChange(tag, $event.target)" />
+          {{ tag }}
+        </label>
+      </div>
+    </div>
+    <button (click)="addFact()">Save Fact</button>
+  </div>
+</div>
