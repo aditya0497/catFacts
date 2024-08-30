@@ -15,12 +15,28 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-left: 10px;
+  width: auto; 
+  padding: 10px 20px;
 }
 
-.fact-entry #actionItem1, #actionItem2 {
-  width: 100px;
-  height: 50px;
-  margin: 10px;
+.fact-entry #newTag,
+.fact-entry #actionItem1,
+.fact-entry #actionItem2 {
+  width: auto;
+  padding: 10px 20px; 
+  height: 40px;
+  border: 2px solid #ced6e0;
+  border-radius: 8px;
+  margin: 10px 5px; 
+}
+
+.fact-entry button {
+  background-color: #6ab04c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .fact-entry button:hover {
@@ -44,14 +60,6 @@
   border-radius: 8px;
   margin-bottom: 15px;
   resize: none;
-}
-
-.fact-entry input[type="text"] {
-  width: calc(100% - 120px);
-
-  border: 2px solid #ced6e0;
-  border-radius: 8px;
-  margin-right: 10px;
 }
 
 .fact-entry label {

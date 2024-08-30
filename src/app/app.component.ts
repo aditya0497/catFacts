@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   public navigateToFactEntry(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/fact-entry']);
   }
 
   public navigateToTagList(): void {
